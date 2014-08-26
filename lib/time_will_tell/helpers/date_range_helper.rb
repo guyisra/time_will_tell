@@ -19,11 +19,21 @@ module TimeWillTell
         dates = { from_day: from_day, sep: separator }
 
         if from_date == to_date
-          template = :same_date
-          dates.merge!(month: from_month, year: from_year)
+          if no_year
+            template = :same_date_no_year
+            dates.merge!(month: from_month)
+          else
+            template = :same_date
+            dates.merge!(month: from_month, year: from_year)
+          end
         elsif from_date.month == to_date.month && from_date.year == to_date.year
-          template = :same_month
-          dates.merge!(to_day: to_day, month: from_month, year: from_year)
+          if no_year
+            template = :same_month_no_year
+            dates.merge!(to_day: to_day, month: from_month)
+          else
+            template = :same_month
+            dates.merge!(to_day: to_day, month: from_month, year: from_year)
+          end
         else
           to_month = month_names[to_date.month]
 

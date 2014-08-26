@@ -5,7 +5,9 @@ en:
       no_year_wanted: "%{from_month} %{from_day} %{sep} %{to_month} %{to_day}"
       different_years: "%{from_month} %{from_day}, %{from_year} %{sep} %{to_month} %{to_day}, %{to_year}"
       same_month: "%{month} %{from_day} %{sep} %{to_day}, %{year}"
+      same_month_no_year: "%{month} %{from_day} %{sep} %{to_day}"
       same_date: "%{month} %{from_day}, %{year}"
+      same_date_no_year: "%{month} %{from_day}"
 
     distance_in_words:
       template: "%{count} %{unit}"
