@@ -2,6 +2,7 @@ en:
   time_will_tell:
     date_range:
       different_months_same_year: "%{from_month} %{from_day} %{sep} %{to_month} %{to_day}, %{year}"
+      no_year_wanted: "%{from_month} %{from_day} %{sep} %{to_month} %{to_day}"
       different_years: "%{from_month} %{from_day}, %{from_year} %{sep} %{to_month} %{to_day}, %{to_year}"
       same_month: "%{month} %{from_day} %{sep} %{to_day}, %{year}"
       same_date: "%{month} %{from_day}, %{year}"

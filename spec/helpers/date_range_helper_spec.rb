@@ -53,6 +53,15 @@ describe TimeWillTell::Helpers::DateRangeHelper do
       ).to eq 'Oct 31 ~ Dec 25, 2013'
     end
 
+    it 'doesnt display a year if you dont want to' do
+      from_date = Date.new(2013, 10, 31)
+      to_date   = Date.new(2013, 12, 25)
+
+      expect(
+        helper.date_range(from_date, to_date, separator: '~', no_year: true)
+      ).to eq 'Oct 31 ~ Dec 25'
+    end
+
     context 'with a custom locale' do
       let(:locale) { :fr }
 
